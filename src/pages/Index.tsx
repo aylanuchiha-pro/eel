@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import AnimatedPage from "@/components/AnimatedPage";
 import ScrollReveal from "@/components/ScrollReveal";
 import ElectricCard from "@/components/ElectricCard";
+import PhotoBand from "@/components/PhotoBand";
 import heroImg from "@/assets/hero-electrical.jpg";
 import renovImg from "@/assets/renovation-electrique.jpg";
 import evImg from "@/assets/ev-charging.jpg";
@@ -171,8 +172,17 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ─── Bande photos ────────────────────────────────────────────────── */}
+      <PhotoBand photos={[
+        { src: renovImg,  alt: "Rénovation électrique" },
+        { src: evImg,     alt: "Borne de recharge" },
+        { src: fortImg,   alt: "Courant fort" },
+        { src: faibleImg, alt: "Courant faible" },
+        { src: heroImg,   alt: "Installation électrique" },
+      ]} />
+
       {/* ─── Cœur de métier ──────────────────────────────────────────────── */}
-      <section className="section-padding">
+      <section className="pb-20 md:pb-28 pt-8 px-4 md:px-8">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal from="left">

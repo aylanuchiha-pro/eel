@@ -78,7 +78,7 @@ const AvisCertificats = () => (
         <ScrollReveal>
           <h2 className="font-display text-xl font-bold text-foreground mb-2">Attestations de bonne réalisation</h2>
           <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-            À la fin de chaque chantier, EEL remet une attestation certifiant la conformité des travaux aux normes en vigueur (NF C 15-100), le respect des délais et la bonne exécution de l'installation.
+            À la fin de chaque chantier, EEL reçoit une attestation certifiant la conformité des travaux aux normes en vigueur (NF C 15-100), le respect des délais et la bonne exécution de l'installation.
           </p>
         </ScrollReveal>
 
