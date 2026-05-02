@@ -36,9 +36,9 @@ const MentionsLegales = () => (
         </Section>
 
         <Section title="Hébergement">
-          <p><span className="font-medium text-foreground">Hébergeur :</span> [NOM DE L'HÉBERGEUR — ex : Vercel, OVH, Netlify…]</p>
-          <p><span className="font-medium text-foreground">Adresse :</span> [ADRESSE DE L'HÉBERGEUR]</p>
-          <p><span className="font-medium text-foreground">Site web :</span> [SITE DE L'HÉBERGEUR]</p>
+          <p><span className="font-medium text-foreground">Hébergeur :</span> Vercel Inc.</p>
+          <p><span className="font-medium text-foreground">Adresse :</span> 340 Pine Street, Suite 701, San Francisco, CA 94104, États-Unis</p>
+          <p><span className="font-medium text-foreground">Site web :</span> vercel.com</p>
         </Section>
 
         <Section title="Assurance professionnelle">
