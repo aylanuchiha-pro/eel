@@ -16,18 +16,15 @@ const certifications = [
     icon: <ShieldCheck className="w-7 h-7 text-primary" />,
     pdfUrl: "#",
   },
-  {
-    name: "Consuel",
-    desc: "Attestation de conformité des installations électriques délivrée par le Consuel.",
-    icon: <BadgeCheck className="w-7 h-7 text-primary" />,
-    pdfUrl: "#",
-  },
+  
 ];
 
 // --- Ajoutez vos attestations de bonne réalisation ici ---
 // Exemple : { chantier: "Installation tableau électrique", lieu: "Paris 12e", date: "Mars 2024", pdfUrl: "/pdf/attestation-paris12.pdf" }
 const attestations: { chantier: string; lieu: string; date: string; pdfUrl: string }[] = [
-  // { chantier: "Installation borne IRVE", lieu: "Vincennes (94)", date: "Janvier 2025", pdfUrl: "/pdf/attestation-1.pdf" },
+  { chantier: "Installation bornes de recharge", lieu: "Montrouge", date: "2022", pdfUrl: "/pdf/40_bornes.pdf" },
+  { chantier: "Chantier CNAM", lieu: "Saint Denis", date: "2024", pdfUrl: "/pdf/CNAM.pdf" },
+  { chantier: "Chantier centre médical", lieu: "Mesnil le roi", date: "2023", pdfUrl: "/pdf/Mesnil.pdf" },
 ];
 
 const AvisCertificats = () => (
