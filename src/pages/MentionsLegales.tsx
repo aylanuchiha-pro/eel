@@ -22,17 +22,17 @@ const MentionsLegales = () => (
 
         <Section title="Éditeur du site">
           <p><span className="font-medium text-foreground">Raison sociale :</span> EEL — Equipement Electrique Lounici</p>
-          <p><span className="font-medium text-foreground">Forme juridique :</span> [Ex : Auto-entrepreneur / SARL / SAS…]</p>
-          <p><span className="font-medium text-foreground">SIRET :</span> [NUMÉRO SIRET]</p>
-          <p><span className="font-medium text-foreground">SIREN :</span> [NUMÉRO SIREN]</p>
-          <p><span className="font-medium text-foreground">Adresse du siège :</span> [ADRESSE COMPLÈTE]</p>
+          <p><span className="font-medium text-foreground">Forme juridique :</span> SARL</p>
+          <p><span className="font-medium text-foreground">SIRET :</span> 79432765000022</p>
+          <p><span className="font-medium text-foreground">SIREN :</span> 794327650</p>
+          <p><span className="font-medium text-foreground">Adresse du siège :</span> 9 allée de la maison blanche, 93320, Les pavillons sous bois</p>
           <p><span className="font-medium text-foreground">Téléphone :</span> 06 64 85 09 36</p>
           <p><span className="font-medium text-foreground">Email :</span> e2te.1511@yahoo.fr</p>
-          <p><span className="font-medium text-foreground">Numéro TVA intracommunautaire :</span> [NUMÉRO TVA — si applicable]</p>
+          <p><span className="font-medium text-foreground">Numéro TVA intracommunautaire :</span> FR64794327650</p>
         </Section>
 
         <Section title="Directeur de la publication">
-          <p>[NOM ET PRÉNOM DU RESPONSABLE]</p>
+          <p>Lounici Mustapha</p>
         </Section>
 
         <Section title="Hébergement">
@@ -42,16 +42,20 @@ const MentionsLegales = () => (
         </Section>
 
         <Section title="Assurance professionnelle">
-          <p><span className="font-medium text-foreground">Assureur :</span> [NOM DE L'ASSUREUR]</p>
+          <p><span className="font-medium text-foreground">Assureur :</span> SMA BTP</p>
+          {/*
           <p><span className="font-medium text-foreground">Numéro de contrat :</span> [NUMÉRO DE CONTRAT]</p>
+          */}
           <p><span className="font-medium text-foreground">Couverture géographique :</span> France</p>
         </Section>
 
+	{/*
         <Section title="Propriété intellectuelle">
           <p>
             L'ensemble du contenu de ce site (textes, images, graphismes, logo) est la propriété exclusive d'EEL — Equipement Electrique Lounici et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, même partielle, est strictement interdite sans autorisation préalable.
           </p>
         </Section>
+        */}
 
         <Section title="Données personnelles">
           <p>

@@ -45,7 +45,7 @@ const Footer = () => (
       <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center text-sm opacity-50 space-y-2">
         <div>© {new Date().getFullYear()} EEL — Equipement Electrique Lounici. Tous droits réservés.</div>
         <div className="flex flex-wrap justify-center gap-4">
-          <span>SIRET : [NUMÉRO SIRET]</span>
+          <span>SIRET : 79432765000022</span>
           <Link to="/mentions-legales" className="hover:opacity-100 transition-opacity underline underline-offset-2">Mentions légales</Link>
         </div>
       </div>
