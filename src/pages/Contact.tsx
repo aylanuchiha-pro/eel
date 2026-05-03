@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Clock3, Mail, MapPin, Phone, Send } from "lucide-react";
@@ -20,18 +20,32 @@ export default function Contact() {
   }, [hash]);
 
   const [form, setForm] = useState({ nom: "", email: "", telephone: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent("Demande de devis EEL");
-    const body = encodeURIComponent(
-      `Nom : ${form.nom}\nTéléphone : ${form.telephone}\nEmail : ${form.email}\n\nMessage :\n${form.message}`
-    );
-    return `${email.href}?subject=${subject}&body=${body}`;
-  }, [form]);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    window.location.href = mailtoHref;
+    setStatus("loading");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "52c07b19-1a9e-4349-aba1-feecd78dc71f",
+          subject: "Demande de devis EEL",
+          from_name: form.nom,
+          ...form,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setForm({ nom: "", email: "", telephone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -143,9 +157,15 @@ export default function Contact() {
                   className="min-h-[130px]"
                   required
                 />
-                <Button type="submit" className="w-full gap-2 rounded-full font-semibold">
-                  Envoyer <Send className="w-4 h-4" />
+                <Button type="submit" disabled={status === "loading"} className="w-full gap-2 rounded-full font-semibold">
+                  {status === "loading" ? "Envoi en cours..." : <><Send className="w-4 h-4" /> Envoyer</>}
                 </Button>
+                {status === "success" && (
+                  <p className="text-sm text-green-600 text-center font-medium">Message envoyé ! On vous répond sous 48h.</p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-red-500 text-center">Une erreur est survenue. Réessayez ou appelez-nous directement.</p>
+                )}
               </form>
             </motion.div>
 
