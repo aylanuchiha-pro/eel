@@ -14,7 +14,7 @@ const certifications = [
     name: "IRVE",
     desc: "Certification obligatoire pour l'installation de bornes de recharge pour véhicules électriques.",
     icon: <ShieldCheck className="w-7 h-7 text-primary" />,
-    pdfUrl: "#",
+    pdfUrl: "/pdf/certificat-irve.pdf",
   },
   
 ];
