@@ -107,6 +107,6 @@
     100% { background-position: 0% 50%; }
   }
   .section-padding {
-    @apply py-20 md:py-28 px-4 md:px-8;
+    @apply py-10 md:py-28 px-4 md:px-8;
   }
 }

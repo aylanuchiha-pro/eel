@@ -104,7 +104,7 @@ const Header = () => {
 
         <div className="flex items-center gap-3">
           <Link
-            to="/contact#contact-form"
+            to="/contact"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full electric-gradient text-white text-sm font-semibold hover:shadow-lg hover:shadow-primary/30 transition-shadow"
           >
             <Zap className="w-4 h-4" /> Devis gratuit
@@ -138,7 +138,7 @@ const Header = () => {
               ))}
               <Link to="/avis" className="px-4 py-3 rounded-lg hover:bg-secondary text-sm font-medium text-foreground">Attestations</Link>
               <Link to="/contact" className="px-4 py-3 rounded-lg hover:bg-secondary text-sm font-medium text-foreground">Contact</Link>
-              <Link to="/contact#contact-form" className="mt-2 px-5 py-3 rounded-full electric-gradient text-white text-sm font-semibold text-center">
+              <Link to="/contact" className="mt-2 px-5 py-3 rounded-full electric-gradient text-white text-sm font-semibold text-center">
                 Devis gratuit
               </Link>
             </div>

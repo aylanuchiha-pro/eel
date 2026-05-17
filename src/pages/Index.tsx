@@ -48,12 +48,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/80 to-navy/40" />
 
         {/* ── Mobile ── */}
-        <div className="lg:hidden relative flex-1 flex flex-col px-5 pt-24 pb-8">
+        <div className="lg:hidden relative flex-1 flex flex-col px-5 pt-20 pb-6">
+          {/* Texte en haut */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex-1 flex flex-col justify-center gap-5"
+            className="flex flex-col gap-4"
           >
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 w-fit">
               <Zap className="w-3.5 h-3.5 text-accent flex-shrink-0" />
@@ -68,39 +69,43 @@ const Index = () => {
               en Île-de-France
             </h1>
 
-            <p className="text-sm text-white/75 leading-relaxed">
+            <p className="text-sm text-white/70 leading-relaxed">
               Installation, rénovation et mise en conformité — EEL accompagne les particuliers et professionnels depuis plus de 15 ans.
             </p>
-
-            <div className="flex flex-col gap-3">
-              <Link
-                to="/contact#contact-form"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/25 text-sm"
-              >
-                Demander un devis gratuit <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href="tel:+33664850936"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-all text-sm"
-              >
-                <Phone className="w-4 h-4" /> 06 64 85 09 36
-              </a>
-            </div>
           </motion.div>
 
+          {/* Boutons + stats épinglés en bas */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="grid grid-cols-2 gap-2.5 mt-6"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-auto flex flex-col gap-2.5"
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/25 text-sm"
+            >
+              Demander un devis gratuit <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="tel:+33664850936"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-all text-sm"
+            >
+              <Phone className="w-4 h-4" /> 06 64 85 09 36
+            </a>
+          </motion.div>
+
+          {/* Stats barre fine en bas */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex mt-4 pt-4 border-t border-white/15"
           >
             {stats.map((stat, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-4 py-3 flex items-center gap-3">
-                {stat.icon}
-                <div>
-                  <div className="font-display text-lg font-bold text-white leading-none">{stat.value}</div>
-                  <div className="text-[11px] text-white/60 mt-0.5 leading-tight">{stat.label}</div>
-                </div>
+              <div key={i} className={`flex-1 flex flex-col items-center text-center py-1 ${i > 0 ? "border-l border-white/15" : ""}`}>
+                <span className="font-display text-base font-bold text-white leading-none">{stat.value}</span>
+                <span className="text-[9px] text-white/55 mt-0.5 leading-tight px-0.5">{stat.label}</span>
               </div>
             ))}
           </motion.div>
@@ -133,7 +138,7 @@ const Index = () => {
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contact#contact-form"
+                    to="/contact"
                     className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/25"
                   >
                     Demander un devis gratuit <ArrowRight className="w-4 h-4" />
@@ -182,9 +187,9 @@ const Index = () => {
       ]} />
 
       {/* ─── Cœur de métier ──────────────────────────────────────────────── */}
-      <section className="pb-20 md:pb-28 pt-8 px-4 md:px-8">
+      <section className="pb-10 md:pb-28 pt-6 md:pt-8 px-4 md:px-8">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <ScrollReveal from="left">
               <span className="text-sm font-semibold text-primary uppercase tracking-wider">Notre ADN</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6 leading-tight">
@@ -217,7 +222,7 @@ const Index = () => {
 
             <ScrollReveal from="right" delay={0.1}>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src={renovImg} alt="Rénovation électrique" className="w-full h-[420px] object-cover" />
+                <img src={renovImg} alt="Rénovation électrique" className="w-full h-[200px] md:h-[420px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
               </div>
             </ScrollReveal>
@@ -281,11 +286,11 @@ const Index = () => {
               { icon: <CheckCircle className="w-7 h-7 text-primary" />, title: "Travaux garantis", desc: "Nos installations sont conformes aux normes en vigueur et font l'objet d'attestations de bonne réalisation." },
             ].map((item, i) => (
               <motion.div key={i} variants={gridItem} className="h-full">
-                <div className="h-full text-center p-8 rounded-2xl bg-card border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 flex-shrink-0">
+                <div className="h-full text-center p-5 md:p-8 rounded-2xl bg-card border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 flex-shrink-0">
                     {item.icon}
                   </div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
+                  <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">{item.desc}</p>
                 </div>
               </motion.div>
@@ -304,16 +309,16 @@ const Index = () => {
             <p className="text-white/70 mb-10 max-w-md mx-auto leading-relaxed">
               Contactez-nous pour un devis gratuit et personnalisé. Réponse garantie sous 48h.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <Link
-                to="/contact#contact-form"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/20"
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/20 text-sm md:text-base"
               >
                 Devis gratuit <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+33664850936"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/25 text-white font-semibold hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-white/25 text-white font-semibold hover:bg-white/10 transition-all text-sm md:text-base"
               >
                 <Phone className="w-4 h-4" /> 06 64 85 09 36
               </a>

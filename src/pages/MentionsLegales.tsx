@@ -27,7 +27,7 @@ const MentionsLegales = () => (
           <p><span className="font-medium text-foreground">SIREN :</span> 794327650</p>
           <p><span className="font-medium text-foreground">Adresse du siège :</span> 9 allée de la maison blanche, 93320, Les pavillons sous bois</p>
           <p><span className="font-medium text-foreground">Téléphone :</span> 06 64 85 09 36</p>
-          <p><span className="font-medium text-foreground">Email :</span> e2te.1511@yahoo.fr</p>
+          <p><span className="font-medium text-foreground">Email :</span> eel_lounici@outlook.fr</p>
           <p><span className="font-medium text-foreground">Numéro TVA intracommunautaire :</span> FR64794327650</p>
         </Section>
 
@@ -59,7 +59,7 @@ const MentionsLegales = () => (
 
         <Section title="Données personnelles">
           <p>
-            Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant : e2te.1511@yahoo.fr.
+            Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers. Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant : eel_lounici@outlook.fr.
           </p>
         </Section>
 

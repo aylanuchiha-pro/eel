@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const phone = { display: "06 64 85 09 36", href: "tel:+33664850936" };
-const email = { display: "e2te.1511@yahoo.fr", href: "mailto:e2te.1511@yahoo.fr" };
+const email = { display: "eel_lounici@outlook.fr", href: "mailto:eel_lounici@outlook.fr" };
 
 export default function Contact() {
   const { hash } = useLocation();
