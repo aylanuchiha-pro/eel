@@ -45,7 +45,7 @@ const Index = () => {
           style={{ y: imageY }}
           className="absolute inset-0 w-full h-[115%] -top-[5%] object-cover will-change-transform"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/80 to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/80 via-navy/55 to-navy/15" />
 
         {/* ── Mobile ── */}
         <div className="lg:hidden relative flex-1 flex flex-col px-5 pt-20 pb-6">
@@ -64,7 +64,7 @@ const Index = () => {
             <h1 className="font-display text-3xl font-bold text-white leading-[1.1]">
               Votre expert en
               <br />
-              <span className="text-gradient">électricité</span>
+              <span className="text-gradient drop-shadow-lg">électricité</span>
               <br />
               en Île-de-France
             </h1>
@@ -128,7 +128,7 @@ const Index = () => {
                 <h1 className="font-display text-5xl xl:text-6xl font-bold text-white leading-[1.1] mb-6">
                   Votre expert en
                   <br />
-                  <span className="text-gradient">électricité</span>
+                  <span className="text-gradient drop-shadow-lg">électricité</span>
                   <br />
                 </h1>
 
@@ -309,16 +309,16 @@ const Index = () => {
             <p className="text-white/70 mb-10 max-w-md mx-auto leading-relaxed">
               Contactez-nous pour un devis gratuit et personnalisé. Réponse garantie sous 48h.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/20 text-sm md:text-base"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground font-semibold hover:brightness-110 transition-all shadow-lg shadow-accent/20"
               >
                 Devis gratuit <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+33664850936"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-white/25 text-white font-semibold hover:bg-white/10 transition-all text-sm md:text-base"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/25 text-white font-semibold hover:bg-white/10 transition-all"
               >
                 <Phone className="w-4 h-4" /> 06 64 85 09 36
               </a>
