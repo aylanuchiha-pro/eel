@@ -1,4 +1,12 @@
-const PhotoBand = ({ photos }: { photos: { src: string; alt: string }[] }) => {
+interface Photo {
+  src: string;
+  alt: string;
+  rotate?: number;        // degrés : 90, -90, 180…
+  position?: string;      // ex: "center top", "center bottom", "left center"
+  scale?: number;         // zoom : 1 = normal, 1.5 = +50%, 2 = x2
+}
+
+const PhotoBand = ({ photos }: { photos: Photo[] }) => {
   const doubled = [...photos, ...photos];
 
   return (
@@ -19,6 +27,13 @@ const PhotoBand = ({ photos }: { photos: { src: string; alt: string }[] }) => {
               src={photo.src}
               alt={photo.alt}
               className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
+              style={{
+                objectPosition: photo.position ?? "center",
+                transform: [
+                  photo.rotate ? `rotate(${photo.rotate}deg)` : "",
+                  photo.scale ? `scale(${photo.scale})` : "",
+                ].filter(Boolean).join(" ") || undefined,
+              }}
             />
           </div>
         ))}

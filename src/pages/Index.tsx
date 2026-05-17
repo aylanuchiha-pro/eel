@@ -179,11 +179,12 @@ const Index = () => {
 
       {/* ─── Bande photos ────────────────────────────────────────────────── */}
       <PhotoBand photos={[
-        { src: renovImg,  alt: "Rénovation électrique" },
-        { src: evImg,     alt: "Borne de recharge" },
-        { src: fortImg,   alt: "Courant fort" },
-        { src: faibleImg, alt: "Courant faible" },
-        { src: heroImg,   alt: "Installation électrique" },
+        { src: "/chantier1.png",  alt: "Chantier EEL", rotate : -10, scale : 1.2},
+        { src: "/chantier2.jpg",  alt: "Chantier EEL", rotate :2, scale : 1.2},
+        { src: "/IMG_4419.JPEG", alt: "Chantier EEL" },
+        { src: "/IMG_6900.JPEG", alt: "Chantier EEL", position : "center top" },
+        { src: "/IMG_7704.JPEG", alt: "Chantier EEL" , position : "center 75%"},
+        { src: "/IMG_8085.JPEG", alt: "Chantier EEL" , position : "center bottom"},
       ]} />
 
       {/* ─── Cœur de métier ──────────────────────────────────────────────── */}
